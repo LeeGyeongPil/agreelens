@@ -1,0 +1,6 @@
+{"id": "a1", "input": {"question": "Summarize the notes.", "answer": "The team ships on Friday."}, "scores": {"human": 4, "judge": 5}, "judge_reason": "Complete."}
+{"id": "a2", "input": {"question": "Explain a hash map.", "answer": "It stores values under keys."}, "scores": {"human": 3, "judge": 3}, "judge_reason": "Partly complete."}
+{"id": "a3", "input": {"question": "회의록을 요약하세요.", "answer": "금요일에 배포하기로 했습니다."}, "scores": {"human": 5, "judge": 4}, "judge_reason": "Minor omissions."}
+{"id": "a4", "input": {"question": "Describe the water cycle.", "answer": "Water evaporates and falls as rain."}, "scores": {"human": 2, "judge": 3}, "judge_reason": "Partly complete."}
+{"id": "a5", "input": {"question": "Translate good morning.", "answer": "Bonjour."}, "scores": {"human": 5, "judge": 5}, "judge_reason": "Complete."}
+{"id": "a6", "input": {"question": "Write a polite refusal.", "answer": "No."}, "scores": {"human": 1, "judge": 2}, "judge_reason": "Too short."}

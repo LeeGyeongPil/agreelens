@@ -1,0 +1,13 @@
+id,question,answer,human,judge,judge_reason
+1,What is the refund window?,Refunds are accepted within 30 days.,pass,pass,Matches the policy page.
+2,Which plan includes SSO?,SSO is included in every plan.,fail,pass,Plausible answer.
+3,How long are logs kept?,Logs are kept for 14 days.,Pass,pass,Matches the docs.
+4,Can I change my username?,"No, never.",fail,fail,Contradicts the profile page.
+5,Where is data stored?,In the region you pick at signup.,pass,pass,Matches the docs.
+6,What is the file size limit?,Uploads are limited to 25 MB.,pass,pass,Matches the docs.
+7,파일 크기 제한은 얼마인가요?,파일당 25MB까지 업로드할 수 있습니다.,pass,pass,문서와 일치합니다.
+8,Do you support webhooks?,Webhooks were removed in 2019.,fail,fail,Not in the docs.
+9,How many seats on Team?,"Unlimited, for free.",fail,pass,Sounds right.
+10,Can I export my data?,Yes: CSV and JSON in Settings.,pass,pass,Matches the docs.
+11,Is there an API rate limit?,Yes: 60 requests per minute.,pass,pass,Matches the docs.
+12,What payment methods work?,Cards and bank transfer.,,pass,Matches the docs.

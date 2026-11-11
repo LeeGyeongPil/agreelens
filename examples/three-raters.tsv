@@ -1,0 +1,9 @@
+id	text	rater_a	rater_b	rater_c	judge
+1	Great answer with sources.	good	good	good	good
+2	Mostly right, one error.	ok	ok	good	ok
+3	Off topic.	bad	bad	bad	ok
+4	Correct but terse.	ok	good	ok	ok
+5	Wrong.	bad	bad	ok	bad
+6	Complete.	good	good	good	good
+7	Partly right.	ok	bad	ok	ok
+8	Hallucinated number.	bad	bad	bad	bad
