@@ -1,0 +1,201 @@
+id,question,answer,human,judge,judge_reason
+q-001,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,pass,The answer is consistent with the support article.
+q-002,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-003,How long are logs kept?,Logs are kept for 14 days.,pass,pass,The answer is consistent with the support article.
+q-004,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-005,Where is data stored?,Data is stored in the region you choose at signup.,pass,pass,The answer is consistent with the support article.
+q-006,What is the file size limit?,Uploads are limited to 2 GB per file.,fail,pass,The answer is consistent with the support article.
+q-007,Is there an API rate limit?,"No, the API has no rate limit.",fail,Fail,The answer contains a claim that the support article does not make.
+q-008,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,pass,The answer is consistent with the support article.
+q-009,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass,pass,The answer is consistent with the support article.
+q-010,What payment methods work?,Credit cards and bank transfer for annual plans.,pass,pass,The answer is consistent with the support article.
+q-011,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-012,How many seats on Team?,The Team plan includes 10 seats.,pass,pass,The answer is consistent with the support article.
+q-013,What is the refund window?,"Refunds are accepted within 90 days, and shipping is always refunded too.",fail, pass,The answer is consistent with the support article.
+q-014,Which plan includes SSO?,"SSO is included in every plan, including Free.",fail,fail,The answer contains a claim that the support article does not make.
+q-015,How long are logs kept?,Logs are kept for 14 days., pass,Pass,The answer is consistent with the support article.
+q-016,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-017,Where is data stored?,Data is stored in the region you choose at signup.,pass,pass,The answer is consistent with the support article.
+q-018,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-019,Is there an API rate limit?,"Yes, 60 requests per minute per key.",pass,pass,The answer is consistent with the support article.
+q-020,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",Pass,pass,The answer is consistent with the support article.
+q-021,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass,pass,The answer is consistent with the support article.
+q-022,What payment methods work?,Credit cards and bank transfer for annual plans.,pass,pass,The answer is consistent with the support article.
+q-023,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-024,How many seats on Team?,The Team plan includes 10 seats., pass,pass,The answer is consistent with the support article.
+q-025,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,pass,The answer is consistent with the support article.
+q-026,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-027,How long are logs kept?,Logs are kept for 14 days.,pass, pass,The answer is consistent with the support article.
+q-028,Can I change my username?,"Yes, once every 30 days from the profile page.",Pass,pass,The answer is consistent with the support article.
+q-029,Where is data stored?,Data is stored in the region you choose at signup.,pass,Pass,The answer is consistent with the support article.
+q-030,What is the file size limit?,Uploads are limited to 25 MB per file.,Pass,pass,The answer is consistent with the support article.
+q-031,Is there an API rate limit?,"No, the API has no rate limit.",fail,pass,The answer is consistent with the support article.
+q-032,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,pass,The answer is consistent with the support article.
+q-033,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass, pass,The answer is consistent with the support article.
+q-034,What payment methods work?,Credit cards and bank transfer for annual plans.,pass, pass,The answer is consistent with the support article.
+q-035,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-036,How many seats on Team?,The Team plan includes 10 seats.,pass,pass,The answer is consistent with the support article.
+q-037,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,pass,The answer is consistent with the support article.
+q-038,Which plan includes SSO?,SSO is included in the Business plan.,pass,Pass,The answer is consistent with the support article.
+q-039,How long are logs kept?,Logs are kept for 14 days.,pass,pass,The answer is consistent with the support article.
+q-040,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-041,Where is data stored?,Data is stored in the region you choose at signup.,pass,Pass,The answer is consistent with the support article.
+q-042,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-043,Is there an API rate limit?,"No, the API has no rate limit.",fail,pass,The answer is consistent with the support article.
+q-044,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,pass,The answer is consistent with the support article.
+q-045,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass,pass,The answer is consistent with the support article.
+q-046,What payment methods work?,Only cryptocurrency is accepted.,fail, fail,The answer contains a claim that the support article does not make.
+q-047,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,Pass,The answer is consistent with the support article.
+q-048,How many seats on Team?,The Team plan includes 10 seats.,pass,pass,The answer is consistent with the support article.
+q-049,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,pass,The answer is consistent with the support article.
+q-050,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-051,How long are logs kept?,Logs are kept for 14 days.,pass,pass,The answer is consistent with the support article.
+q-052,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-053,Where is data stored?,Data is stored in the region you choose at signup.,pass,Pass,The answer is consistent with the support article.
+q-054,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-055,Is there an API rate limit?,"Yes, 60 requests per minute per key.",pass,pass,The answer is consistent with the support article.
+q-056,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,pass,The answer is consistent with the support article.
+q-057,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass,pass,The answer is consistent with the support article.
+q-058,What payment methods work?,Only cryptocurrency is accepted.,Fail,pass,The answer is consistent with the support article.
+q-059,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-060,How many seats on Team?,The Team plan includes 10 seats.,pass,pass,The answer is consistent with the support article.
+q-061,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,Pass,The answer is consistent with the support article.
+q-062,Which plan includes SSO?,"SSO is included in every plan, including Free.",fail,FAIL,The answer contains a claim that the support article does not make.
+q-063,How long are logs kept?,Logs are kept for 14 days.,pass,pass,The answer is consistent with the support article.
+q-064,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-065,Where is data stored?,Data is stored in the region you choose at signup.,Pass,pass,The answer is consistent with the support article.
+q-066,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-067,Is there an API rate limit?,"Yes, 60 requests per minute per key.",pass,pass,The answer is consistent with the support article.
+q-068,How do I reset my password?,Contact the CEO by email to reset it.,fail,fail,The answer contains a claim that the support article does not make.
+q-069,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass,pass,The answer is consistent with the support article.
+q-070,What payment methods work?,Only cryptocurrency is accepted.,fail,fail,The answer contains a claim that the support article does not make.
+q-071,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,PASS,The answer is consistent with the support article.
+q-072,How many seats on Team?,The Team plan includes unlimited seats for free.,Fail,fail,The answer contains a claim that the support article does not make.
+q-073,What is the refund window?,"Refunds are accepted within 90 days, and shipping is always refunded too.",fail,fail,The answer contains a claim that the support article does not make.
+q-074,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-075,How long are logs kept?,Logs are kept for 14 days.,pass,pass,The answer is consistent with the support article.
+q-076,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-077,Where is data stored?,Data is always stored in a single US data center.,fail,pass,The answer is consistent with the support article.
+q-078,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-079,Is there an API rate limit?,"Yes, 60 requests per minute per key.",pass,pass,The answer is consistent with the support article.
+q-080,How do I reset my password?,Contact the CEO by email to reset it.,fail,fail,The answer contains a claim that the support article does not make.
+q-081,Do you support webhooks?,"Yes, webhooks can be configured per project.",Pass,Pass,The answer is consistent with the support article.
+q-082,What payment methods work?,Credit cards and bank transfer for annual plans.,pass,Pass,The answer is consistent with the support article.
+q-083,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-084,How many seats on Team?,The Team plan includes 10 seats.,pass,pass,The answer is consistent with the support article.
+q-085,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,pass,The answer is consistent with the support article.
+q-086,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-087,How long are logs kept?,Logs are kept for 14 days.,pass,fail,The answer contains a claim that the support article does not make.
+q-088,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-089,Where is data stored?,Data is stored in the region you choose at signup.,pass,pass,The answer is consistent with the support article.
+q-090,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-091,Is there an API rate limit?,"Yes, 60 requests per minute per key.", pass,pass,The answer is consistent with the support article.
+q-092,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,pass,The answer is consistent with the support article.
+q-093,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass, pass,The answer is consistent with the support article.
+q-094,What payment methods work?,Credit cards and bank transfer for annual plans.,pass,pass,The answer is consistent with the support article.
+q-095,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass, pass,The answer is consistent with the support article.
+q-096,How many seats on Team?,The Team plan includes 10 seats., pass,Pass,The answer is consistent with the support article.
+q-097,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,pass,The answer is consistent with the support article.
+q-098,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-099,How long are logs kept?,Logs are kept for 14 days.,pass,pass,The answer is consistent with the support article.
+q-100,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-101,Where is data stored?,Data is stored in the region you choose at signup.,pass,pass,The answer is consistent with the support article.
+q-102,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-103,Is there an API rate limit?,"Yes, 60 requests per minute per key.",pass,pass,The answer is consistent with the support article.
+q-104,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,pass,The answer is consistent with the support article.
+q-105,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass,Pass,The answer is consistent with the support article.
+q-106,What payment methods work?,Credit cards and bank transfer for annual plans.,,pass,The answer is consistent with the support article.
+q-107,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-108,How many seats on Team?,The Team plan includes 10 seats.,pass,pass,The answer is consistent with the support article.
+q-109,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,pass,The answer is consistent with the support article.
+q-110,Which plan includes SSO?,"SSO is included in every plan, including Free.",fail,pass,The answer is consistent with the support article.
+q-111,How long are logs kept?,Logs are kept for 14 days.,pass,pass,The answer is consistent with the support article.
+q-112,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-113,Where is data stored?,Data is stored in the region you choose at signup.,pass,pass,The answer is consistent with the support article.
+q-114,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,Pass,The answer is consistent with the support article.
+q-115,Is there an API rate limit?,"Yes, 60 requests per minute per key.",pass,Pass,The answer is consistent with the support article.
+q-116,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,pass,The answer is consistent with the support article.
+q-117,Do you support webhooks?,Webhooks were removed in 2019 and cannot be used.,fail,pass,The answer is consistent with the support article.
+q-118,What payment methods work?,Credit cards and bank transfer for annual plans.,pass,pass,The answer is consistent with the support article.
+q-119,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-120,How many seats on Team?,The Team plan includes 10 seats.,pass,pass,The answer is consistent with the support article.
+q-121,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,Fail,The answer contains a claim that the support article does not make.
+q-122,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-123,How long are logs kept?,Logs are kept for 14 days.,pass,pass,The answer is consistent with the support article.
+q-124,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-125,Where is data stored?,Data is stored in the region you choose at signup.,pass,pass,The answer is consistent with the support article.
+q-126,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-127,Is there an API rate limit?,"Yes, 60 requests per minute per key.",pass,pass,The answer is consistent with the support article.
+q-128,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,PASS,The answer is consistent with the support article.
+q-129,Do you support webhooks?,Webhooks were removed in 2019 and cannot be used., fail,pass,The answer is consistent with the support article.
+q-130,What payment methods work?,Credit cards and bank transfer for annual plans.,pass,pass,The answer is consistent with the support article.
+q-131,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-132,How many seats on Team?,The Team plan includes 10 seats.,pass,pass,The answer is consistent with the support article.
+q-133,What is the refund window?,"Refunds are accepted within 90 days, and shipping is always refunded too.",fail,fail,The answer contains a claim that the support article does not make.
+q-134,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-135,How long are logs kept?,Logs are kept for 14 days.,pass,pass,The answer is consistent with the support article.
+q-136,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-137,Where is data stored?,Data is stored in the region you choose at signup.,pass,pass,The answer is consistent with the support article.
+q-138,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-139,Is there an API rate limit?,"Yes, 60 requests per minute per key.",pass,pass,The answer is consistent with the support article.
+q-140,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,pass,The answer is consistent with the support article.
+q-141,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass,pass,The answer is consistent with the support article.
+q-142,What payment methods work?,Credit cards and bank transfer for annual plans.,pass,fail,The answer contains a claim that the support article does not make.
+q-143,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass, pass,The answer is consistent with the support article.
+q-144,How many seats on Team?,The Team plan includes 10 seats.,pass,pass,The answer is consistent with the support article.
+q-145,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,Pass,The answer is consistent with the support article.
+q-146,Which plan includes SSO?,"SSO is included in every plan, including Free.",fail,pass,The answer is consistent with the support article.
+q-147,How long are logs kept?,Logs are kept for 14 days.,pass,pass,The answer is consistent with the support article.
+q-148,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-149,Where is data stored?,Data is stored in the region you choose at signup.,pass,Pass,The answer is consistent with the support article.
+q-150,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,fail,The answer contains a claim that the support article does not make.
+q-151,Is there an API rate limit?,"Yes, 60 requests per minute per key.",pass,pass,The answer is consistent with the support article.
+q-152,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,pass,The answer is consistent with the support article.
+q-153,Do you support webhooks?,Webhooks were removed in 2019 and cannot be used.,FAIL,fail,The answer contains a claim that the support article does not make.
+q-154,What payment methods work?,Only cryptocurrency is accepted.,fail,Pass,The answer is consistent with the support article.
+q-155,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-156,How many seats on Team?,The Team plan includes 10 seats.,pass,,
+q-157,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,pass,The answer is consistent with the support article.
+q-158,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-159,How long are logs kept?,Logs are kept for 14 days.,pass,Pass,The answer is consistent with the support article.
+q-160,Can I change my username?,"Yes, once every 30 days from the profile page.",N/A,pass,The answer is consistent with the support article.
+q-161,Where is data stored?,Data is stored in the region you choose at signup.,pass,pass,The answer is consistent with the support article.
+q-162,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-163,Is there an API rate limit?,"No, the API has no rate limit.",fail,fail,The answer contains a claim that the support article does not make.
+q-164,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,Pass,The answer is consistent with the support article.
+q-165,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass,pass,The answer is consistent with the support article.
+q-166,What payment methods work?,Credit cards and bank transfer for annual plans.,pass,pass,The answer is consistent with the support article.
+q-167,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-168,How many seats on Team?,The Team plan includes 10 seats.,pass,pass,The answer is consistent with the support article.
+q-169,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,pass,The answer is consistent with the support article.
+q-170,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-171,How long are logs kept?,Logs are kept forever by default.,fail,fail,The answer contains a claim that the support article does not make.
+q-172,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-173,Where is data stored?,Data is stored in the region you choose at signup.,pass,pass,The answer is consistent with the support article.
+q-174,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-175,Is there an API rate limit?,"Yes, 60 requests per minute per key.",pass,pass,The answer is consistent with the support article.
+q-176,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,pass,The answer is consistent with the support article.
+q-177,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass,pass,The answer is consistent with the support article.
+q-178,What payment methods work?,Credit cards and bank transfer for annual plans.,pass,pass,The answer is consistent with the support article.
+q-179,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-180,How many seats on Team?,The Team plan includes 10 seats.,pass,pass,The answer is consistent with the support article.
+q-181,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,pass,The answer is consistent with the support article.
+q-182,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-183,How long are logs kept?,Logs are kept for 14 days.,pass,pass,The answer is consistent with the support article.
+q-184,Can I change my username?,"Yes, once every 30 days from the profile page.",pass,pass,The answer is consistent with the support article.
+q-185,Where is data stored?,Data is stored in the region you choose at signup.,pass,pass,The answer is consistent with the support article.
+q-186,What is the file size limit?,Uploads are limited to 2 GB per file.,fail,pass,The answer is consistent with the support article.
+q-187,Is there an API rate limit?,"Yes, 60 requests per minute per key.",pass,pass,The answer is consistent with the support article.
+q-188,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.", pass,pass,The answer is consistent with the support article.
+q-189,Do you support webhooks?,"Yes, webhooks can be configured per project.",pass,PASS,The answer is consistent with the support article.
+q-190,What payment methods work?,Credit cards and bank transfer for annual plans.,pass,pass,The answer is consistent with the support article.
+q-191,Can I export my data?,"Yes, CSV and JSON exports are available in Settings.",pass,pass,The answer is consistent with the support article.
+q-192,How many seats on Team?,The Team plan includes 10 seats.,pass,PASS,The answer is consistent with the support article.
+q-193,What is the refund window?,Refunds are accepted within 30 days of purchase.,pass,pass,The answer is consistent with the support article.
+q-194,Which plan includes SSO?,SSO is included in the Business plan.,pass,pass,The answer is consistent with the support article.
+q-195,How long are logs kept?,Logs are kept for 14 days.,pass,PASS,The answer is consistent with the support article.
+q-196,Can I change my username?,"No, usernames can never be changed.",fail,fail,The answer contains a claim that the support article does not make.
+q-197,Where is data stored?,Data is stored in the region you choose at signup.,pass,pass,The answer is consistent with the support article.
+q-198,What is the file size limit?,Uploads are limited to 25 MB per file.,pass,pass,The answer is consistent with the support article.
+q-199,Is there an API rate limit?,"Yes, 60 requests per minute per key.",Pass,pass,The answer is consistent with the support article.
+q-200,How do I reset my password?,"Use the ""Forgot password"" link on the sign-in page.",pass,pass,The answer is consistent with the support article.
