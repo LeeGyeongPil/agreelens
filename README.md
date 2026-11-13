@@ -151,7 +151,6 @@ uv run --with scikit-learn==1.9.1 --with krippendorff==0.9.0 --with statsmodels=
 | The page says the file could not be used | Empty file, no header row, or a JSONL line that is not a JSON object | Read the message; export again as CSV, TSV or JSONL with a header row. |
 | Kappa shows NA | Both sides used the same single label, or no row has both labels | See the reason next to NA. If only the judge used one label, kappa is 0 with a warning and MCC is NA. |
 | Weighted kappa looks odd for text labels | No order was set, so labels are ordered alphabetically | Set the label order in the label table. |
-| A CSV error names a row number one too high | Known issue: for an unclosed quote the data row in the message is one too large (other CSV errors are correct) | Look at the row just before the number shown. |
 | Fewer rows than the file has | Missing labels and tied majorities are left out | See the "rows left out" notice for the counts. |
 
 ## Roadmap
@@ -166,7 +165,7 @@ npm run build && node scripts/check-dist.mjs
 node scripts/smoke-dist.mjs
 ```
 
-At the time of writing: 12 test files, 119 tests, all passing; the built page is one 768 kB file (149 kB gzip). Bugs and ideas are welcome as issues. Changes are listed in [CHANGELOG.md](CHANGELOG.md).
+At the time of writing: 12 test files, 125 tests, all passing; the built page is one 768 kB file (149 kB gzip). Bugs and ideas are welcome as issues. Changes are listed in [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
