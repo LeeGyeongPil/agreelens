@@ -233,3 +233,31 @@ describe('mapping guess and validation', () => {
     expect(validateMapping(fields, { ...emptyMapping(), humanColumns: ['a'], judgeColumn: 'b' })).toEqual([])
   })
 })
+
+describe('parseTable: CSV error row numbers are data rows counted from 1', () => {
+  const rowOf = (text: string, kind: 'csv' | 'tsv', reason: string) =>
+    parseTable(text, kind).errors.find((e) => e.reason === reason)?.row
+
+  it('unclosed quote on data row 2 (and the TooFewFields next to it)', () => {
+    const t = 'id,human,judge\n1,pass,pass\n2,"pass,fail\n3,fail,fail\n'
+    expect(rowOf(t, 'csv', 'MissingQuotes')).toBe(2)
+    expect(rowOf(t, 'csv', 'TooFewFields')).toBe(2)
+  })
+  it('unclosed quote on data row 1', () => {
+    expect(rowOf('id,human,judge\n1,"pass,pass\n', 'csv', 'MissingQuotes')).toBe(1)
+  })
+  it('invalid quote on data row 2', () => {
+    expect(rowOf('id,human,judge\n1,pass,pass\n2,"pa"ss,fail\n3,fail,fail\n', 'csv', 'InvalidQuotes')).toBe(2)
+  })
+  it('TSV unclosed quote on data row 2', () => {
+    expect(rowOf('id\thuman\tjudge\n1\tpass\tpass\n2\t"pass\tfail\n3\tfail\tfail\n', 'tsv', 'MissingQuotes')).toBe(2)
+  })
+  it('field-count errors keep their row numbers', () => {
+    expect(rowOf('id,human,judge\n1,pass,pass\n2,pass,fail,x\n3,fail,fail\n', 'csv', 'TooManyFields')).toBe(2)
+    expect(rowOf('id,human,judge\n1,pass,pass\n2,pass,fail\n3,fail\n', 'csv', 'TooFewFields')).toBe(3)
+  })
+  it('a valid multi-line quoted field before the error does not shift the row', () => {
+    const t = 'id,human,judge\n1,"pa\nss",pass\n2,pass,pass\n3,"pa"ss,fail\n4,fail,fail\n'
+    expect(rowOf(t, 'csv', 'InvalidQuotes')).toBe(3)
+  })
+})
