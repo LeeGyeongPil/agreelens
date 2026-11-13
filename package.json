@@ -1,6 +1,6 @@
 {
   "name": "agreelens",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Check whether your LLM judge agrees with human labels - kappa, alpha, confusion matrix and disagreement review in one local HTML file.",
   "license": "MIT",
   "private": true,
