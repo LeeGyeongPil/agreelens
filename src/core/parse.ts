@@ -73,7 +73,8 @@ function parseDelimited(text: string, kind: 'csv' | 'tsv'): ParsedTable {
   })
   const errors: ParseIssue[] = res.errors.map((e) => ({
     code: 'csv_row' as const,
-    row: typeof e.row === 'number' ? e.row + 1 : undefined,
+    // Papa counts Quotes errors from 1 already but FieldMismatch errors from 0.
+    row: typeof e.row === 'number' ? (e.type === 'Quotes' ? e.row : e.row + 1) : undefined,
     detail: e.message,
     reason: e.code,
   }))
