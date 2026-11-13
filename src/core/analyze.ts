@@ -234,7 +234,8 @@ export function analyze(rows: readonly Record<string, string>[], mapping: Mappin
   }
   const judgeLabels = new Set(prepared.map((r) => r.judge))
   if (n > 0 && judgeLabels.size === 1) {
-    warnings.push({ code: 'judge_single_label', severity: 'warn', params: { label: prepared[0].judge } })
+    // kappa is NA (not 0) when the humans used the same single label; the "kappa is 0" text would be wrong then
+    if (kappa.value !== null) warnings.push({ code: 'judge_single_label', severity: 'warn', params: { label: prepared[0].judge } })
   } else if (judgeTop && judgeTop.share >= PREVALENCE_THRESHOLD) {
     warnings.push({ code: 'prevalence', severity: 'warn', params: { source: 'judge', label: judgeTop.label, share: judgeTop.share } })
   }
