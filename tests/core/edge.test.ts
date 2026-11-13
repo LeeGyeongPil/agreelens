@@ -17,6 +17,23 @@ describe('kappa edge cases', () => {
     expect(r.agreement.value).toBe(1)
     expect(r.kappaCI?.used).toBe(0) // every resample is undefined, reported as dropped
     expect(r.kappaCI?.dropped).toBe(r.kappaCI?.iters)
+    // kappa is NA, so neither the "kappa is 0" warning nor a judge prevalence warning may appear
+    const codes = r.warnings.map((w) => w.code)
+    expect(codes).not.toContain('judge_single_label')
+    expect(r.warnings.some((w) => w.code === 'prevalence' && w.params.source === 'judge')).toBe(false)
+  })
+
+  it('humans use another single label than the judge -> kappa 0 and the warning stays', () => {
+    const r = analyze(rowsFrom({ human: Array(40).fill('fail'), judge: Array(40).fill('pass') }), mappingFor())
+    expect(r.kappa.value).toBeCloseTo(0, 12)
+    expect(r.warnings.map((w) => w.code)).toContain('judge_single_label')
+  })
+
+  it('ordinal scale, same single label on both sides -> kappa and weighted kappa NA, no single-label warning', () => {
+    const r = analyze(rowsFrom({ human: Array(10).fill('3'), judge: Array(10).fill('3') }), mappingFor(['human'], 'judge', { scale: 'ordinal' }))
+    expect(r.kappa.value).toBeNull()
+    expect(r.kappaLinear?.value).toBeNull()
+    expect(r.warnings.map((w) => w.code)).not.toContain('judge_single_label')
   })
 
   it('only the judge uses one label -> kappa 0 like scikit-learn, plus the single-label warning', () => {
