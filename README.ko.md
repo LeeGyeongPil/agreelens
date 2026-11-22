@@ -92,7 +92,7 @@ id,question,answer,human,judge,judge_reason
 {"id": "a1", "input": {"question": "Summarize the notes.", "answer": "The team ships on Friday."}, "scores": {"human": 4, "judge": 5}, "judge_reason": "Complete."}
 ```
 
-- 형식: `.csv`, `.tsv`, `.jsonl`. 중첩된 JSONL 키는 `scores.human` 같은 점 경로가 됩니다.
+- 형식: `.csv`(세미콜론 구분 CSV도 자동으로 읽힘), `.tsv`, `.jsonl`. 중첩된 JSONL 키는 `scores.human` 같은 점 경로가 됩니다.
 - 불러온 뒤 열을 지정합니다. 열 이름으로 기본값을 추측해 줍니다.
 - 정리: 공백 제거, 대소문자 무시, 결측으로 볼 값 지정. 라벨 표에서 표기를 합치거나 라벨을 제외할 수 있습니다.
 - 순서가 있는 문자열 라벨(예: `bad`, `ok`, `good`)은 순서를 직접 지정하세요. 지정하지 않으면 알파벳순입니다.
@@ -165,7 +165,7 @@ npm run build && node scripts/check-dist.mjs
 node scripts/smoke-dist.mjs
 ```
 
-작성 시점 기준 테스트 파일 12개, 테스트 128개가 모두 통과하며, 빌드된 페이지는 770 kB 파일 하나입니다(gzip 149 kB). 버그와 제안은 이슈로 남겨 주세요. 변경 기록은 [CHANGELOG.md](CHANGELOG.md).
+작성 시점 기준 테스트 파일 12개, 테스트 134개가 모두 통과하며, 빌드된 페이지는 770 kB 파일 하나입니다(gzip 149 kB). 버그와 제안은 이슈로 남겨 주세요. 변경 기록은 [CHANGELOG.md](CHANGELOG.md).
 
 ## 라이선스
 

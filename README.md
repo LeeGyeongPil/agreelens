@@ -92,7 +92,7 @@ id,question,answer,human,judge,judge_reason
 {"id": "a1", "input": {"question": "Summarize the notes.", "answer": "The team ships on Friday."}, "scores": {"human": 4, "judge": 5}, "judge_reason": "Complete."}
 ```
 
-- Formats: `.csv`, `.tsv`, `.jsonl`. Nested JSONL keys become dot paths such as `scores.human`.
+- Formats: `.csv` (semicolon-separated CSV is also read automatically), `.tsv`, `.jsonl`. Nested JSONL keys become dot paths such as `scores.human`.
 - After loading, map the columns. agreelens guesses defaults from the column names.
 - Cleaning: trim spaces, ignore case, and choose which values count as missing. A label table lets you merge spellings or leave a label out.
 - For ordered text labels (for example `bad`, `ok`, `good`), set the order yourself; without it, the order is alphabetical.
@@ -165,7 +165,7 @@ npm run build && node scripts/check-dist.mjs
 node scripts/smoke-dist.mjs
 ```
 
-At the time of writing: 12 test files, 128 tests, all passing; the built page is one 770 kB file (149 kB gzip). Bugs and ideas are welcome as issues. Changes are listed in [CHANGELOG.md](CHANGELOG.md).
+At the time of writing: 12 test files, 134 tests, all passing; the built page is one 770 kB file (149 kB gzip). Bugs and ideas are welcome as issues. Changes are listed in [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
