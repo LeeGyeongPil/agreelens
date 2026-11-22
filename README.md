@@ -165,7 +165,7 @@ npm run build && node scripts/check-dist.mjs
 node scripts/smoke-dist.mjs
 ```
 
-At the time of writing: 12 test files, 125 tests, all passing; the built page is one 768 kB file (149 kB gzip). Bugs and ideas are welcome as issues. Changes are listed in [CHANGELOG.md](CHANGELOG.md).
+At the time of writing: 12 test files, 128 tests, all passing; the built page is one 770 kB file (149 kB gzip). Bugs and ideas are welcome as issues. Changes are listed in [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 

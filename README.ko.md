@@ -165,7 +165,7 @@ npm run build && node scripts/check-dist.mjs
 node scripts/smoke-dist.mjs
 ```
 
-작성 시점 기준 테스트 파일 12개, 테스트 125개가 모두 통과하며, 빌드된 페이지는 768 kB 파일 하나입니다(gzip 149 kB). 버그와 제안은 이슈로 남겨 주세요. 변경 기록은 [CHANGELOG.md](CHANGELOG.md).
+작성 시점 기준 테스트 파일 12개, 테스트 128개가 모두 통과하며, 빌드된 페이지는 770 kB 파일 하나입니다(gzip 149 kB). 버그와 제안은 이슈로 남겨 주세요. 변경 기록은 [CHANGELOG.md](CHANGELOG.md).
 
 ## 라이선스
 
