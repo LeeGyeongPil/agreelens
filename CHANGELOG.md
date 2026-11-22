@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.4] - 2026-11-23
+
+### Fixed
+- A semicolon-separated `.csv` (common spreadsheet export in some locales) is now split into columns instead of being read as a single column. Comma CSV, TSV and JSONL are unchanged.
+
 ## [0.1.3] - 2026-11-22
 
 ### Fixed
