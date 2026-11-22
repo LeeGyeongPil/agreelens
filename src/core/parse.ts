@@ -64,20 +64,45 @@ function parseJsonl(text: string): ParsedTable {
   return { kind: 'jsonl', fields, rows, errors }
 }
 
+/**
+ * Count the blank lines (skipped by `skipEmptyLines: 'greedy'`) that sit outside quotes before `index`.
+ * Papa's Quotes errors count those lines in `row`; its FieldMismatch errors do not.
+ */
+function blankLinesBefore(text: string, index: number, delimiter: string): number {
+  let blanks = 0
+  let inQuotes = false
+  let lineStart = 0
+  const end = Math.min(index, text.length)
+  for (let i = 0; i < end; i++) {
+    const ch = text[i]
+    if (ch === '"') inQuotes = !inQuotes
+    else if (ch === '\n' && !inQuotes) {
+      if (text.slice(lineStart, i).split(delimiter).join('').trim() === '') blanks++
+      lineStart = i + 1
+    }
+  }
+  return blanks
+}
+
 function parseDelimited(text: string, kind: 'csv' | 'tsv'): ParsedTable {
-  const res = Papa.parse<Record<string, string>>(stripBom(text), {
+  const body = stripBom(text)
+  const delimiter = kind === 'tsv' ? '\t' : ','
+  const res = Papa.parse<Record<string, string>>(body, {
     header: true,
-    delimiter: kind === 'tsv' ? '\t' : ',',
+    delimiter,
     skipEmptyLines: 'greedy',
     transformHeader: (h) => h.trim(),
   })
-  const errors: ParseIssue[] = res.errors.map((e) => ({
-    code: 'csv_row' as const,
-    // Papa counts Quotes errors from 1 already but FieldMismatch errors from 0.
-    row: typeof e.row === 'number' ? (e.type === 'Quotes' ? e.row : e.row + 1) : undefined,
-    detail: e.message,
-    reason: e.code,
-  }))
+  const errors: ParseIssue[] = res.errors.map((e) => {
+    const base = { code: 'csv_row' as const, detail: e.message, reason: e.code }
+    if (typeof e.row !== 'number') return base
+    if (e.type !== 'Quotes') return { ...base, row: e.row + 1 }
+    // Papa counts Quotes errors from 1 for data rows (0 = header line) and includes blank lines;
+    // remove the blank lines so the number matches the other errors on the same row.
+    const row = e.row - (typeof e.index === 'number' ? blankLinesBefore(body, e.index, delimiter) : 0)
+    if (row <= 0) return { ...base, code: 'csv_header' as const }
+    return { ...base, row }
+  })
   const fields = (res.meta.fields ?? []).filter((f) => f !== '')
   const rows = res.data.map((r) => {
     const out: Record<string, string> = {}

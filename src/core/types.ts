@@ -28,7 +28,7 @@ export interface BootstrapCI {
 }
 
 export interface ParseIssue {
-  code: 'empty_file' | 'no_columns' | 'csv_row' | 'jsonl_line' | 'jsonl_not_object' | 'no_rows' | 'read_failed'
+  code: 'empty_file' | 'no_columns' | 'csv_row' | 'csv_header' | 'jsonl_line' | 'jsonl_not_object' | 'no_rows' | 'read_failed'
   /** 1-based row (CSV) or line (JSONL) number */
   row?: number
   detail?: string

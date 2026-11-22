@@ -30,6 +30,8 @@ export const ko: Record<MessageKey, string> = {
   'err.csv_row.MissingQuotes': '데이터 {row}번째 행에 닫히지 않은 따옴표가 있습니다 (머리글 줄은 세지 않습니다).',
   'err.csv_row.InvalidQuotes': '데이터 {row}번째 행의 따옴표 사용이 올바르지 않습니다 (머리글 줄은 세지 않습니다).',
   'err.csv_row.UndetectableDelimiter': '구분자를 알아낼 수 없습니다. CSV 는 쉼표, TSV 는 탭으로 구분해야 합니다.',
+  'err.csv_header': '머리글(열 이름 줄)의 따옴표 사용이 올바르지 않습니다.',
+  'err.csv_header.MissingQuotes': '머리글(열 이름 줄)에 닫히지 않은 따옴표가 있습니다.',
   'err.jsonl_line': '{row}번째 줄이 올바른 JSON 이 아닙니다.',
   'err.jsonl_not_object': '{row}번째 줄이 JSON 객체가 아닙니다. JSONL 의 각 줄은 {"human": "pass", "judge": "fail"} 같은 모양이어야 합니다.',
   'err.read_failed': '파일을 읽지 못했습니다. 텍스트 파일인지 확인하고 다시 시도하세요.',

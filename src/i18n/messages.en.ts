@@ -29,6 +29,8 @@ export const en = {
   'err.csv_row.MissingQuotes': 'Data row {row} has a quote that is never closed (the header line is not counted).',
   'err.csv_row.InvalidQuotes': 'Data row {row} uses quotes incorrectly (the header line is not counted).',
   'err.csv_row.UndetectableDelimiter': 'The delimiter could not be detected. Use commas for CSV and tabs for TSV.',
+  'err.csv_header': 'The header line (column names) uses quotes incorrectly.',
+  'err.csv_header.MissingQuotes': 'The header line (column names) has a quote that is never closed.',
   'err.jsonl_line': 'Line {row} is not valid JSON.',
   'err.jsonl_not_object': 'Line {row} is not a JSON object. Each JSONL line must look like {"human": "pass", "judge": "fail"}.',
   'err.read_failed': 'The file could not be read. Check that it is a text file and try again.',
