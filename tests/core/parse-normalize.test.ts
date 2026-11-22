@@ -282,3 +282,39 @@ describe('parseTable: CSV error row numbers are data rows counted from 1', () =>
     expect(t.errors.some((e) => e.code === 'csv_row' && e.row === 0)).toBe(false)
   })
 })
+
+describe('parseTable: semicolon-separated CSV falls back from the comma parse', () => {
+  it('splits columns, with matching values and no errors', () => {
+    const t = parseTable('id;human;judge\n1;pass;pass\n', 'csv')
+    expect(t.errors).toEqual([])
+    expect(t.fields).toEqual(['id', 'human', 'judge'])
+    expect(t.rows).toEqual([{ id: '1', human: 'pass', judge: 'pass' }])
+  })
+  it('works with a BOM and CRLF line endings', () => {
+    const t = parseTable('﻿id;human;judge\r\n1;pass;fail\r\n2;fail;fail\r\n', 'csv')
+    expect(t.errors).toEqual([])
+    expect(t.fields).toEqual(['id', 'human', 'judge'])
+    expect(t.rows).toHaveLength(2)
+    expect(t.rows[0].judge).toBe('fail')
+  })
+  it('uses the semicolon for quote-error row numbers after blank lines', () => {
+    const t = parseTable('id;human;judge\n1;pass;pass\n\n2;"pass;fail\n3;pass;pass\n', 'csv')
+    const err = t.errors.find((e) => e.reason === 'MissingQuotes')
+    expect(err?.row).toBe(2)
+  })
+  it('a one-column comma CSV whose values contain ";" stays one column without new errors', () => {
+    const t = parseTable('label\na;b\nc;d\n', 'csv')
+    expect(t.errors).toEqual([])
+    expect(t.fields).toEqual(['label'])
+    expect(t.rows).toEqual([{ label: 'a;b' }, { label: 'c;d' }])
+  })
+  it('a one-column CSV whose header contains ";" is not split when the retry gives one column', () => {
+    const t = parseTable('only\nx\n', 'csv')
+    expect(t.fields).toEqual(['only'])
+    expect(t.errors).toEqual([])
+  })
+  it('TSV is not affected by semicolons', () => {
+    const t = parseTable('a;b\tc\n1;2\t3\n', 'tsv')
+    expect(t.fields).toEqual(['a;b', 'c'])
+  })
+})

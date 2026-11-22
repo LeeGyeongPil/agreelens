@@ -86,13 +86,24 @@ function blankLinesBefore(text: string, index: number, delimiter: string): numbe
 
 function parseDelimited(text: string, kind: 'csv' | 'tsv'): ParsedTable {
   const body = stripBom(text)
-  const delimiter = kind === 'tsv' ? '\t' : ','
-  const res = Papa.parse<Record<string, string>>(body, {
-    header: true,
-    delimiter,
-    skipEmptyLines: 'greedy',
-    transformHeader: (h) => h.trim(),
-  })
+  let delimiter = kind === 'tsv' ? '\t' : ','
+  const parse = (d: string) =>
+    Papa.parse<Record<string, string>>(body, {
+      header: true,
+      delimiter: d,
+      skipEmptyLines: 'greedy',
+      transformHeader: (h) => h.trim(),
+    })
+  let res = parse(delimiter)
+  // Semicolon-separated CSV (common Excel export in some locales) reads as one column with ','.
+  // Retry once with ';' only when that clearly helps; otherwise keep the comma result unchanged.
+  if (kind === 'csv' && res.meta.fields?.length === 1 && (body.split(/\r?\n/, 1)[0] ?? '').includes(';')) {
+    const retry = parse(';')
+    if ((retry.meta.fields?.length ?? 0) > 1) {
+      res = retry
+      delimiter = ';'
+    }
+  }
   const errors: ParseIssue[] = res.errors.map((e) => {
     const base = { code: 'csv_row' as const, detail: e.message, reason: e.code }
     if (typeof e.row !== 'number') return base
