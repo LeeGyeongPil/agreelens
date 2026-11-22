@@ -260,4 +260,25 @@ describe('parseTable: CSV error row numbers are data rows counted from 1', () =>
     const t = 'id,human,judge\n1,"pa\nss",pass\n2,pass,pass\n3,"pa"ss,fail\n4,fail,fail\n'
     expect(rowOf(t, 'csv', 'InvalidQuotes')).toBe(3)
   })
+
+  it('blank lines before an unclosed quote do not shift its row (1 and 2 blank lines)', () => {
+    const one = 'id,human,judge\n1,pass,pass\n\n2,"pass,fail\n3,pass,pass\n'
+    const two = 'id,human,judge\n1,pass,pass\n\n\n2,"pass,fail\n3,pass,pass\n'
+    for (const t of [one, two]) {
+      expect(rowOf(t, 'csv', 'MissingQuotes')).toBe(2)
+      expect(rowOf(t, 'csv', 'TooFewFields')).toBe(2)
+    }
+    expect(rowOf('id,human,judge\n1,pass,pass\n2,"pass,fail\n', 'csv', 'MissingQuotes')).toBe(2)
+  })
+  it('blank lines inside a quoted field are not removed from the row count', () => {
+    const t = 'id,human,judge\n1,"pa\n\nss",pass\n2,"pass,fail\n'
+    expect(rowOf(t, 'csv', 'MissingQuotes')).toBe(2)
+  })
+  it('an unclosed quote in the header is a header error, not data row 0', () => {
+    const t = parseTable('id,"human,judge\n1,pass,pass\n', 'csv')
+    const err = t.errors.find((e) => e.reason === 'MissingQuotes')
+    expect(err?.code).toBe('csv_header')
+    expect(err?.row).toBeUndefined()
+    expect(t.errors.some((e) => e.code === 'csv_row' && e.row === 0)).toBe(false)
+  })
 })

@@ -21,6 +21,12 @@ describe('Korean message fixes', () => {
         expect(MESSAGES[lang][`err.csv_row.${r}` as keyof typeof MESSAGES.en]).toBeTruthy()
       }
     }
+    for (const lang of ['en', 'ko'] as const) {
+      for (const k of ['err.csv_header', 'err.csv_header.MissingQuotes'] as const) {
+        expect(MESSAGES[lang][k as keyof typeof MESSAGES.en]).toBeTruthy()
+      }
+    }
+    expect(MESSAGES.ko['err.csv_header.MissingQuotes']).toContain('머리글')
     expect(MESSAGES.ko['err.csv_row.TooFewFields']).not.toMatch(/[A-Za-z]{4,} fields/)
   })
 
